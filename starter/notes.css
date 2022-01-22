@@ -1,0 +1,42 @@
+/* Some important notes about how css works behind the scene's
+steps on how css is parsed
+i) resolving conflicting css declarations (cascade)
+ii) Processing final css values 
+iii) CSSOM css object model where all the parsed css values are stored 
+The final css and html parsed value is called the render tree 
+
+Author declarations, css style rule declared by the developer
+User declarations, css from user interactions with the browser
+Browser declarations(user agent decla.), default declarations by the browser
+
+How Css is parsed
+User declarations with the !important  (first)
+Author declarations with the !important  (second)
+Author declarations (third)
+User declarations (forth)
+Default browser (declarations)
+
+when all the author defined css rule has no !important keyword
+the css calculates the specificity by:
+i) Inline Style (highest specificity)
+ii) ID's second (highest specificity)
+iii) Classe's, Pseudo-classes, attribute (Third highest)
+iv) Elements and psuedo element's least specificity
+
+the cascaded value, the resultant value after resolving the css
+
+if all the resulting css return the same number of specificity the last css declaration would be applied
+
+how css is parsed
+when using percentages to specify font-size the font-size of the parent container is used
+using percentages to specify length its calculated relative to the parents width
+ems are measured relative to their parents font-size, if used to specify font size
+ems are measured relative to the current font-size, if used to specify lenghts
+rems are always measured relative to the root documents root font-size 
+vh and vw are simply percentage measurement the viewports height and width
+
+
+BASIC PRINCIPLES OF RESPONSIVE DESIGN
+    i) Fliud Grid and Layouts
+    ii) Flexible/Responsive Images
+    iii) Media Queries
